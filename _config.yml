@@ -5,14 +5,14 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # `jekyll serve`. If you change this file, please restart the server process.
 
-minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "escapism" #"default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "ja-JP"
 title                    : "現実逃避跡地"
 title_separator          : "-"
 name                     : "@ayata_taguchi_"
-description              : "マルチメディアサークル「現実逃避跡地」のホームページです．サークルメンバーの紹介やイベントの情報を掲載してます．．"
+description              : "マルチメディアサークル「現実逃避跡地」のホームページです．サークルメンバーの紹介やイベントの情報を掲載してます．"
 url                      : "https://ayata3.github.io/Escapism/"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -114,7 +114,7 @@ author:
   weibo            :
   xing             :
   youtube          : # "https://youtube.com/c/MichaelRoseDesign"
-  pixiv            : "https://www.pixiv.net/member.php?id=2457129"
+  pixiv            : "2457129"
 
 
 # Reading Files
