@@ -84,9 +84,9 @@ analytics:
 
 # Site Author
 author:
-  name             : "多口綾汰"
-  avatar           : "https://pbs.twimg.com/profile_images/566619725090676736/iD24NfRg_400x400.jpeg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Webエンジニア．小説も絵もコードも書きます．エンジニアとしてはメタデータが好きです．"
+  name             : "現実逃避跡地"
+  avatar           : "/assets/img/logo.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  bio              : "マルチメディアサークル．小説も絵もコードも書きます．"
   location         : #"Iwata/Shizuoka"
   email            : "ayata.grobserver[at]gmail.com"
   uri              : 
@@ -109,12 +109,12 @@ author:
   stackoverflow    : # "123456/username" (the last part of your profile url, e.g. https://stackoverflow.com/users/123456/username)
   steam            : # "steamId" (the last part of your profile url, e.g. https://steamcommunity.com/id/steamId/)
   tumblr           :
-  twitter          : "ayata_taguchi_"
+  twitter          : 
   vine             :
   weibo            :
   xing             :
   youtube          : # "https://youtube.com/c/MichaelRoseDesign"
-  pixiv            : "2457129"
+  pixiv            : 
 
 
 # Reading Files

@@ -50,8 +50,8 @@
 
       {% if author.uri %}
         <li>
-          <a href="{{ author.uri }}" itemprop="url">
-            <i class="fas fa-fw fa-link" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].website_label | default: "Website" }}
+          <a href="https://www.pixiv.net/member.php?id={{ author.uri }}" itemprop="url">
+            <i class="fas fa-fw fa-link" aria-hidden="true"></i> pixiv
           </a>
         </li>
       {% endif %}
