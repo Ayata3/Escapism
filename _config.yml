@@ -16,7 +16,7 @@ description              : "マルチメディアサークル「現実逃避跡�
 url                      : "https://ayata3.github.io/Escapism/"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
-teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
+teaser                   : "/assets/img/logo.png"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
@@ -67,7 +67,7 @@ facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 : # Open Graph/Twitter default site image
+og_image                 : "/assets/img/logo.png"# Open Graph/Twitter default site image
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
@@ -84,13 +84,13 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Name"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an amazing person."
-  location         : "Somewhere"
-  email            :
+  name             : "多口綾汰"
+  avatar           : "https://pbs.twimg.com/profile_images/566619725090676736/iD24NfRg_400x400.jpeg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  bio              : "Webエンジニア．小説も絵もコードも書きます．エンジニアとしてはメタデータが好きです．"
+  location         : #"Iwata/Shizuoka"
+  email            : "ayata.grobserver[at]gmail.com"
   uri              :
-  home             : # null (default), "absolute or relative url to link to author home"
+  home             : "https://www.pixiv.net/member.php?id=2457129"# null (default), "absolute or relative url to link to author home"
   bitbucket        :
   codepen          :
   dribbble         :
@@ -109,7 +109,7 @@ author:
   stackoverflow    : # "123456/username" (the last part of your profile url, e.g. https://stackoverflow.com/users/123456/username)
   steam            : # "steamId" (the last part of your profile url, e.g. https://steamcommunity.com/id/steamId/)
   tumblr           :
-  twitter          :
+  twitter          : "ayata_taguchi_"
   vine             :
   weibo            :
   xing             :
