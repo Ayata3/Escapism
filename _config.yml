@@ -89,8 +89,8 @@ author:
   bio              : "Webエンジニア．小説も絵もコードも書きます．エンジニアとしてはメタデータが好きです．"
   location         : #"Iwata/Shizuoka"
   email            : "ayata.grobserver[at]gmail.com"
-  uri              :
-  home             : "https://www.pixiv.net/member.php?id=2457129"# null (default), "absolute or relative url to link to author home"
+  uri              : 
+  home             : # null (default), "absolute or relative url to link to author home"
   bitbucket        :
   codepen          :
   dribbble         :
@@ -114,6 +114,7 @@ author:
   weibo            :
   xing             :
   youtube          : # "https://youtube.com/c/MichaelRoseDesign"
+  pixiv            : "https://www.pixiv.net/member.php?id=2457129"
 
 
 # Reading Files
