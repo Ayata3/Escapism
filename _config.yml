@@ -12,7 +12,7 @@ locale                   : "ja-JP"
 title                    : "現実逃避跡地"
 title_separator          : "-"
 name                     : "@ayata_taguchi_"
-description              : "マルチメディアサークル「現実逃避跡地」のホームページです．サークルメンバーの紹介やイベントの情報を掲載してます．"
+description              : "マルチメディア創作サークル「現実逃避跡地」のホームページです．サークルメンバーの紹介や活動記録を掲載してます．"
 url                      : "https://ayata3.github.io/Escapism/"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -86,9 +86,9 @@ analytics:
 author:
   name             : "現実逃避跡地"
   avatar           : "/assets/img/logo.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "マルチメディアサークル．小説も絵もコードも書きます．"
+  bio              : "マルチメディア創作サークル．小説も絵もコードも書きます．"
   location         : #"Iwata/Shizuoka"
-  email            : "ayata.grobserver[at]gmail.com"
+  email            : #"ayata.grobserver[at]gmail.com"
   uri              : 
   home             : # null (default), "absolute or relative url to link to author home"
   bitbucket        :
@@ -109,8 +109,9 @@ author:
   stackoverflow    : # "123456/username" (the last part of your profile url, e.g. https://stackoverflow.com/users/123456/username)
   steam            : # "steamId" (the last part of your profile url, e.g. https://steamcommunity.com/id/steamId/)
   tumblr           :
-  twitter          : 
-  vine             :
+  twitter          : "ayata_taguchi_"
+  twitter1         : "tkmx0"
+  vine             : 
   weibo            :
   xing             :
   youtube          : # "https://youtube.com/c/MichaelRoseDesign"
@@ -183,8 +184,8 @@ sass:
 # Outputting
 permalink: /:categories/:title/
 paginate: 5 # amount of posts to show
-paginate_path: /page:num/
-timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+paginate_path: /blog/page:num/
+timezone: Asia/Tokyo # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
 # Plugins (previously gems:)
