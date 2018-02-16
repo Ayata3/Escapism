@@ -7,7 +7,7 @@ ayata_taguchi:
     - image_path: https://pbs.twimg.com/profile_images/566619725090676736/iD24NfRg_400x400.jpeg
       alt: "ayata_taguchi icon"
       title: "多口綾汰"
-      excerpt: '<p>Webエンジニア．小説も絵もコードも書きます．エンジニアとしてはメタデータが好きです．
+      excerpt: '<p>Webエンジニア．小説も絵もコードも書きます．エンジニアとしてはメタデータが好きです．</p>
       <div class="author__urls-wrapper">
     <button class="btn btn--inverse">Follow</button>
     <ul class="author__urls social-icons">
@@ -37,7 +37,7 @@ tkmx0:
     - image_path: https://pbs.twimg.com/profile_images/942271871147323392/omGuIKay_400x400.jpg
       alt: "tkmx0 icon"
       title: "さとみん"
-      excerpt: '<p>エンジニア．小説も絵もコードも書きます．エンジニアとしては最適化が好きです．
+      excerpt: '<p>エンジニア．小説も絵もコードも書きます．エンジニアとしては最適化が好きです．</p>
       <div class="author__urls-wrapper">
     <button class="btn btn--inverse">Follow</button>
     <ul class="author__urls social-icons">
