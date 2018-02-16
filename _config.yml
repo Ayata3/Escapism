@@ -14,7 +14,7 @@ title_separator          : "-"
 name                     : "@ayata_taguchi_"
 description              : "マルチメディア創作サークル「現実逃避跡地」のホームページです．サークルメンバーの紹介や活動記録を掲載してます．"
 url                      : "https://ayata3.github.io/Escapism/"
-baseurl                  : # the subpath of your site, e.g. "/blog"
+baseurl                  : "/Escapism"  # the subpath of your site, e.g. "/blog"
 repository               : "ayata3/Escapism" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : "/assets/img/logo.png"
 # breadcrumbs            : false # true, false (default)
@@ -91,7 +91,7 @@ author:
   location         : #"Iwata/Shizuoka"
   email            : #"ayata.grobserver[at]gmail.com"
   uri              : 
-  home             : "https://ayata3.github.io/Escapism/" # null (default), "absolute or relative url to link to author home"
+  home             : #"https://ayata3.github.io/Escapism/" # null (default), "absolute or relative url to link to author home"
   bitbucket        :
   codepen          :
   dribbble         :
