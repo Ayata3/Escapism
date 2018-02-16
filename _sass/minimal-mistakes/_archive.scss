@@ -65,8 +65,15 @@
 .archive__item-teaser {
   border-radius: $border-radius;
   overflow: hidden;
+  margin: 5px;
   img {
+    border-radius: 50%;
     width: 100%;
+
+    @include breakpoint($large) {
+      padding: 5px;
+      border: 1px solid $border-color;
+    }
   }
 }
 
