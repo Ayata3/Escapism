@@ -2,7 +2,7 @@
   name: "多口綾汰"
   email: "ayata.grobserver[at]gmail.com"
   bio: "Webエンジニア．小説も絵もコードも書きます．エンジニアとしてはメタデータが好きです．"
-  avatar: "https://pbs.twimg.com/profile_images/566619725090676736/iD24NfRg_400x400.jpeg"
+  avatar: /assets/img/ayata.jpg
   twitter: "ayata_taguchi_"
   uri : "2457129"
 
@@ -10,5 +10,5 @@
   name: "さとみん"
   email: "TBD"
   bio: "エンジニア/社外取締役．小説も絵もコードも書きます．エンジニアとしては最適化が好きです．"
-  avatar: "https://pbs.twimg.com/profile_images/1022900286673707008/rey_zFS8_400x400.jpg"
+  avatar: /assets/img/tkmx0.jpg
   twitter: "tkmx0"

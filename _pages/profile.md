@@ -4,7 +4,7 @@ layout: default
 permalink: /profile/
 
 ayata_taguchi:
-    - image_path: https://pbs.twimg.com/profile_images/566619725090676736/iD24NfRg_400x400.jpeg
+    - image_path: /assets/img/ayata.jpg
       alt: "ayata_taguchi icon"
       title: "多口綾汰"
       excerpt: '<div class="author__content"><p class="author__bio">Webエンジニア．小説も絵もコードも書きます．エンジニアとしてはメタデータが好きです．</p></div>
@@ -34,7 +34,7 @@ ayata_taguchi:
   </div>'
 
 tkmx0:
-    - image_path: https://pbs.twimg.com/profile_images/942271871147323392/omGuIKay_400x400.jpg
+    - image_path: /assets/img/tkmx0.jpg
       alt: "tkmx0 icon"
       title: "さとみん"
       excerpt: '<div class="author__content"><p class="author__bio">エンジニア．小説も絵もコードも書きます．エンジニアとしては最適化が好きです．</p></div>
