@@ -19,7 +19,7 @@ module.exports = {
 		indent: [2, 'tab'],
 		'@typescript-eslint/quotes': [
 			2,
-			'backtick',
+			'single',
 			{
 				avoidEscape: true
 			}
