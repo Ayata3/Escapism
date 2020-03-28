@@ -22,7 +22,12 @@ export const pageQuery = graphql`
 `
 
 const IndexPage: React.FC<IndexPageProps> = props => {
-  return <div>Hello world, {props.data.site.siteMetadata.siteName}</div>
+  return (
+    <div>
+      Hello, My website{` `}
+      {props.data.site.siteMetadata.siteName}
+    </div>
+  )
 }
 
 export default IndexPage
