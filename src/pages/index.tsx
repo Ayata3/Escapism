@@ -24,7 +24,7 @@ export const pageQuery = graphql`
 const IndexPage: React.FC<IndexPageProps> = props => {
   return (
     <div>
-      Hello, My website{` `}
+      Hello, My website{' '}
       {props.data.site.siteMetadata.siteName}
     </div>
   )

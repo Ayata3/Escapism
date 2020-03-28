@@ -10,13 +10,12 @@
     "serve": "gatsby serve",
     "type-check": "tsc --noEmit",
     "lint": "eslint . --ignore-path .gitignore --ext .ts,.tsx,.js",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   },
   "dependencies": {
     "gatsby": "^2.20.8",
     "gatsby-plugin-google-analytics": "^2.2.2",
+    "gatsby-plugin-postcss": "^2.2.1",
     "gatsby-plugin-purgecss": "^5.0.0",
     "gatsby-plugin-typescript": "^2.3.1",
     "gh-pages": "^2.2.0",
@@ -25,26 +24,15 @@
     "tailwindcss": "^1.2.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.9.0",
-    "@emotion/core": "^10.0.28",
-    "@emotion/styled": "^10.0.27",
-    "@storybook/addon-actions": "^5.3.17",
-    "@storybook/addon-links": "^5.3.17",
-    "@storybook/addons": "^5.3.17",
-    "@storybook/cli": "^5.3.17",
-    "@storybook/react": "^5.3.17",
     "@types/node": "^12.12.11",
     "@types/react": "^16.9.11",
     "@types/react-dom": "^16.9.4",
     "@typescript-eslint/eslint-plugin": "^2.8.0",
     "@typescript-eslint/parser": "^2.8.0",
-    "babel-loader": "^8.1.0",
     "eslint": "^5.16.0",
     "eslint-config-prettier": "^6.7.0",
     "eslint-plugin-prettier": "^3.1.1",
-    "gatsby-plugin-emotion": "^4.2.1",
     "prettier": "^1.19.1",
-    "twin.macro": "^1.0.0-alpha.7",
     "typescript": "^3.7.2"
   }
 }

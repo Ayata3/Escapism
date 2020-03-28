@@ -1,18 +1,18 @@
 module.exports = {
   siteMetadata: {
-    siteName: `Escapism`,
-    exampleUrl: `https://ayata3.github.io/Escapism/`,
+    siteName: 'Escapism',
+    exampleUrl: 'https://ayata3.github.io/Escapism/',
   },
-  pathPrefix: `Escapism`,
+  pathPrefix: 'Escapism',
   plugins: [
-    `gatsby-plugin-typescript`,
-    `gatsby-plugin-emotion`,
+    'gatsby-plugin-typescript',
+    'gatsby-plugin-postcss',
     {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: { trackingId: `UA-139333253-2` },
+      resolve: 'gatsby-plugin-google-analytics',
+      options: { trackingId: 'UA-139333253-2' },
     },
     {
-      resolve: `gatsby-plugin-purgecss`,
+      resolve: 'gatsby-plugin-purgecss',
       options: {
         printRejected: true,
         tailwind: true,
