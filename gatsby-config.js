@@ -21,5 +21,14 @@ module.exports = {
         purgeOnly: [],
       },
     },
+    // {
+    //   resolve: 'gatsby-source-filesystem',
+    //   options: {
+    //     name: 'images',
+    //     path: `${__dirname}/src/images`,
+    //   },
+    // },
+    // 'gatsby-plugin-sharp',
+    // 'gatsby-transformer-sharp',
   ],
 }

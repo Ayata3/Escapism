@@ -3,7 +3,8 @@ module.exports = {
 	extends: [
 		'plugin:@typescript-eslint/recommended',
 		'plugin:prettier/recommended',
-		'prettier/@typescript-eslint'
+		'plugin:react/recommended',
+		'prettier/@typescript-eslint',
 	],
 	plugins: ['@typescript-eslint', 'prettier'],
 	parserOptions: {
@@ -33,6 +34,7 @@ module.exports = {
 				singleQuote: true,
 				printWidth: 60
 			}
-		]
+		],
+		'react/prop-types': [0], // 0 = off
 	}
 };

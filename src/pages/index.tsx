@@ -1,6 +1,8 @@
 import { graphql } from 'gatsby'
 import React from 'react'
 
+import TopTemplate from '../components/templates/TopTemplate'
+
 interface IndexPageProps {
   data: {
     site: {
@@ -23,10 +25,12 @@ export const pageQuery = graphql`
 
 const IndexPage: React.FC<IndexPageProps> = props => {
   return (
-    <div>
-      Hello, My website{' '}
-      {props.data.site.siteMetadata.siteName}
-    </div>
+    <TopTemplate>
+      <div className="flex">
+        Hello, My website{' '}
+        {props.data.site.siteMetadata.siteName}
+      </div>
+    </TopTemplate>
   )
 }
 
