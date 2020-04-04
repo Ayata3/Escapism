@@ -1,8 +1,11 @@
 import React from 'react'
+import { Link } from 'gatsby'
+
 import Header from '../atoms/Header'
 import Footer from '../atoms/Footer'
 import TopHero from '../atoms/TopHero'
-import ProfileCard from '../molecules/ProfileCard'
+import ProfileCard from '../organisms/ProfileCard'
+import Information from '../organisms/Infomation'
 
 const TopTemplate: React.FC = ({ children }) => {
   return (
@@ -11,12 +14,21 @@ const TopTemplate: React.FC = ({ children }) => {
       <TopHero />
       <ProfileCard>
         <div className="flex justify-center mt-4">
-          <button className="border border-white text-white py-2 px-10">
-            Show More
-          </button>
+          <Link to={'/profile'}>
+            <button className="border border-white text-white py-2 px-10">
+              Show More
+            </button>
+          </Link>
         </div>
       </ProfileCard>
-      {children}
+      <Information>
+        {children}
+        <div className="flex justify-center mt-4">
+          <button className="border border-gray-900 text-gray-900 py-2 px-10">
+            一覧を見る
+          </button>
+        </div>
+      </Information>
       <Footer />
     </div>
   )

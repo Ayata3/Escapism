@@ -23,15 +23,8 @@ export const pageQuery = graphql`
   }
 `
 
-const IndexPage: React.FC<IndexPageProps> = props => {
-  return (
-    <TopTemplate>
-      <div className="flex">
-        Hello, My website{' '}
-        {props.data.site.siteMetadata.siteName}
-      </div>
-    </TopTemplate>
-  )
+const IndexPage: React.FC<IndexPageProps> = () => {
+  return <TopTemplate />
 }
 
 export default IndexPage
