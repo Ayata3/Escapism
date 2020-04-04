@@ -10,6 +10,7 @@ const ProfileTemplate: React.FC = ({ children }) => {
       <Header />
       <ProfileCard />
       <History />
+      {children}
       <Footer />
     </div>
   )
