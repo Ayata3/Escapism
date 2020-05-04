@@ -1,30 +1,10 @@
-import { graphql } from 'gatsby'
 import React from 'react'
-
 import TopTemplate from '../components/templates/TopTemplate'
+import { FETCH_POSTS } from '../queries/posts'
 
-interface IndexPageProps {
-  data: {
-    site: {
-      siteMetadata: {
-        siteName: string
-      }
-    }
-  }
-}
-
-export const pageQuery = graphql`
-  query IndexQuery {
-    site {
-      siteMetadata {
-        siteName
-      }
-    }
-  }
-`
-
-const IndexPage: React.FC<IndexPageProps> = () => {
-  return <TopTemplate />
+const IndexPage: React.FC = () => {
+  const posts = FETCH_POSTS()
+  return <TopTemplate posts={posts} />
 }
 
 export default IndexPage

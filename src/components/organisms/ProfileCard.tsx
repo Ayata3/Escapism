@@ -1,19 +1,19 @@
 import React from 'react'
 import Section from '../atoms/Section'
-import BorderBottom from '../atoms/BorderBottom'
+import BottomBorderBox from '../atoms/BottomBorderBox'
 import ProfileIcon from '../atoms/ProfileIcon'
 import Container from '../atoms/Container'
 
 const ProfileCard: React.FC = ({ children }) => {
   return (
     <Container className={'bg-orange-400'}>
-      <BorderBottom>
+      <BottomBorderBox>
         <Section
           sectionName={'Profile'}
           sectionSubName={'プロフィール'}
           className={'text-white'}
         />
-      </BorderBottom>
+      </BottomBorderBox>
       <div className="grid grid-rows-4 grid-flow-col gap-0 mt-4 sm:w-auto md:w-auto">
         <div className="row-span-4">
           <ProfileIcon />

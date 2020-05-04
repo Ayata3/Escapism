@@ -7,7 +7,13 @@ import TopHero from '../atoms/TopHero'
 import ProfileCard from '../organisms/ProfileCard'
 import Information from '../organisms/Infomation'
 
-const TopTemplate: React.FC = ({ children }) => {
+interface TopTemplateProps {
+  posts: any
+}
+
+const TopTemplate: React.FC<TopTemplateProps> = ({
+  posts,
+}) => {
   return (
     <div className="flex flex-col min-h-screen bg-white">
       <Header />
@@ -21,8 +27,7 @@ const TopTemplate: React.FC = ({ children }) => {
           </Link>
         </div>
       </ProfileCard>
-      <Information>
-        {children}
+      <Information posts={posts}>
         <div className="flex justify-center mt-4">
           <button className="border border-gray-900 text-gray-900 py-2 px-10">
             一覧を見る
