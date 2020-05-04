@@ -10,6 +10,7 @@ interface InformationProps {
 
 const Information: React.FC<InformationProps> = ({
   posts,
+  children,
 }) => {
   return (
     <Container className={'bg-white'}>
@@ -42,6 +43,7 @@ const Information: React.FC<InformationProps> = ({
           </div>
         )
       })}
+      {children}
     </Container>
   )
 }

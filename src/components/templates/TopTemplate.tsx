@@ -29,9 +29,11 @@ const TopTemplate: React.FC<TopTemplateProps> = ({
       </ProfileCard>
       <Information posts={posts}>
         <div className="flex justify-center mt-4">
-          <button className="border border-gray-900 text-gray-900 py-2 px-10">
-            一覧を見る
-          </button>
+          <Link to={'/information'}>
+            <button className="border border-gray-900 text-gray-900 py-2 px-10">
+              Show More
+            </button>
+          </Link>
         </div>
       </Information>
       <Footer />
