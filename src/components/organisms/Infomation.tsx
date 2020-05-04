@@ -11,7 +11,6 @@ interface InformationProps {
 const Information: React.FC<InformationProps> = ({
   posts,
 }) => {
-  const latestPost = posts.edges.slice(0, 3)
   return (
     <Container className={'bg-white'}>
       <Section
@@ -19,7 +18,7 @@ const Information: React.FC<InformationProps> = ({
         sectionSubName={'インフォメーション'}
         className={'text-orange-400'}
       />
-      {latestPost.map((post: any) => {
+      {posts.map((post: any) => {
         return (
           <div
             className="text-gray-900 mx-8"
