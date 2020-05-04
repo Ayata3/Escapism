@@ -26,7 +26,9 @@ const Information: React.FC<InformationProps> = ({
             key={post.node.fields.slug}
           >
             <div className="my-4">
-              <Link to={post.node.fields.slug}>
+              <Link
+                to={`information${post.node.fields.slug}`}
+              >
                 <BottomBorderBox>
                   <p className="lg:text-lg xl:text-lg font-semibold mb-2">
                     {post.node.frontmatter.title}
