@@ -9,8 +9,8 @@ export const FETCH_IMAGES = (): any => {
             relativePath
             name
             childImageSharp {
-              sizes {
-                ...GatsbyImageSharpSizes
+              fixed(width: 92, height: 92) {
+                ...GatsbyImageSharpFixed
               }
             }
           }

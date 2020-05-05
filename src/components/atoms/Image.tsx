@@ -18,7 +18,7 @@ const Image: React.FC<ImageProps> = ({
   return (
     <Img
       className={addClassName}
-      sizes={image.node.childImageSharp.sizes}
+      fixed={image.node.childImageSharp.fixed}
     />
   )
 }
