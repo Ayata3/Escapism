@@ -6,6 +6,7 @@ import Footer from '../atoms/Footer'
 import InformationHero from '../atoms/InformationHero'
 import Post from '../organisms/Post'
 import Pagination from '../organisms/Pagination'
+import Metadata from '../atoms/Metadata'
 
 interface PostTemplateProps {
   data: any
@@ -21,6 +22,10 @@ const PostTemplate: React.FC<PostTemplateProps> = ({
 
   return (
     <div className="flex flex-col min-h-screen bg-white">
+      <Metadata
+        title={post.frontmatter.title}
+        description={post.excerpt}
+      />
       <Header />
       <InformationHero />
       <Post post={post} />
