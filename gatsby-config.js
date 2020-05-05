@@ -10,7 +10,7 @@ module.exports = {
       twitter: 'ayata_taguchi_',
     },
   },
-  pathPrefix: 'Escapism',
+  pathPrefix: '/Escapism',
   plugins: [
     'gatsby-plugin-typescript',
     'gatsby-plugin-postcss',
@@ -53,7 +53,12 @@ module.exports = {
         ],
       },
     },
-    'gatsby-transformer-sharp',
+    {
+      resolve: 'gatsby-transformer-sharp',
+      options: {
+        checkSupportedExtensions: false,
+      },
+    },
     'gatsby-plugin-sharp',
     'gatsby-plugin-twitter',
     'gatsby-plugin-react-helmet',
