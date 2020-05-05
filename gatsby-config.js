@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/camelcase */
 module.exports = {
   siteMetadata: {
     title: '現実逃避跡地',
@@ -55,5 +56,18 @@ module.exports = {
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     'gatsby-plugin-twitter',
+    'gatsby-plugin-react-helmet',
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: '現実逃避跡地',
+        short_name: 'Escapism',
+        start_url: '/Escapism',
+        background_color: '#000',
+        theme_color: '#f6ad55',
+        display: 'minimal-ui',
+        icon: './src/images/logo.png',
+      },
+    },
   ],
 }
