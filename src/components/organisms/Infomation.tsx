@@ -34,7 +34,7 @@ const Information: React.FC<InformationProps> = ({
                     {post.node.frontmatter.title}
                   </p>
                   <p className="text-sm">
-                    {post.node.frontmatter.description}
+                    {post.node.excerpt}
                   </p>
                   <p className="text-sm text-right my-1">
                     {post.node.frontmatter.date}

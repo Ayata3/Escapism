@@ -10,12 +10,12 @@ export const FETCH_POSTS = (): any => {
         edges {
           node {
             id
+            excerpt(pruneLength: 40)
             fields {
               slug
             }
             frontmatter {
               date(formatString: "YYYY/MM/DD")
-              description
               title
             }
           }
