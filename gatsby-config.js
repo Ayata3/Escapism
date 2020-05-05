@@ -74,5 +74,6 @@ module.exports = {
         icon: './src/images/logo.png',
       },
     },
+    'gatsby-plugin-offline',
   ],
 }
