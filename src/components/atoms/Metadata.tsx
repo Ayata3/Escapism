@@ -53,6 +53,11 @@ const Metadata: React.FC<MetadataProps> = ({
           content:
             description || site.siteMetadata.description,
         },
+        {
+          name: 'google-site-verification',
+          content:
+            'Wj-rsWIHA_2EegrJ7sDJAdyhoD2mAR4wk68w1_NPwZA',
+        },
       ]}
     />
   )
