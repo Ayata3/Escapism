@@ -3,7 +3,7 @@ module.exports = {
   siteMetadata: {
     title: '現実逃避跡地',
     siteName: 'Escapism',
-    siteUrl: 'https://ayata3.github.io/Escapism/',
+    siteUrl: 'https://ayata3.github.io/',
     description:
       'サークル「現実逃避跡地」のホームページです。',
     social: {
@@ -75,5 +75,6 @@ module.exports = {
       },
     },
     'gatsby-plugin-offline',
+    'gatsby-plugin-sitemap',
   ],
 }
