@@ -76,5 +76,13 @@ module.exports = {
     },
     'gatsby-plugin-offline',
     'gatsby-plugin-sitemap',
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://ayata3.github.io/Escapism',
+        sitemap:
+          'https://ayata3.github.io/Escapism/sitemap.xml',
+      },
+    },
   ],
 }
