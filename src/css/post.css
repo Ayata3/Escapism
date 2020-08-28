@@ -28,3 +28,7 @@
 .post li {
   margin-bottom: 8px;
 }
+
+.post a {
+  color: #1b95e0;
+}
