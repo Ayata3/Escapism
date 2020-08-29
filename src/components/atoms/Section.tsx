@@ -6,7 +6,7 @@ interface SectionProps {
   className: string
 }
 
-const Section: React.FC<SectionProps> = props => {
+const Section: React.FC<SectionProps> = (props) => {
   return (
     <div className="flex">
       <h2 className={`text-3xl ${props.className}`}>

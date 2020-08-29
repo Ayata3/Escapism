@@ -12,7 +12,7 @@ const History: React.FC = ({ children }) => {
         className={'text-orange-400'}
       />
       <ul className="mt-4 text-gray-900">
-        {history.map(data => {
+        {history.map((data) => {
           return (
             <li
               className="grid grid-flow-row grid-cols-2 gap-0 sm:w-auto md:w-auto mb-2 text-xs lg:text-lg xl:text-lg"
