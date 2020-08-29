@@ -12,7 +12,7 @@ const Pagination: React.FC<PaginationProps> = ({
   next,
 }) => {
   const PreviousButton = previous ? (
-    <Link to={`information${previous.fields.slug}`}>
+    <Link to={`/information${previous.fields.slug}`}>
       <div className="text-gray-900 mx-8">
         <div className="my-4">
           <div className="lg:text-lg xl:text-lg font-semibold mb-2">
@@ -28,7 +28,7 @@ const Pagination: React.FC<PaginationProps> = ({
   ) : null
 
   const NextButton = next ? (
-    <Link to={`information${next.fields.slug}`}>
+    <Link to={`/information${next.fields.slug}`}>
       <div className="text-gray-900 mx-8">
         <div className="my-4">
           <div className="lg:text-lg xl:text-lg font-semibold mb-2">

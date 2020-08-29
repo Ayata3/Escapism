@@ -27,7 +27,7 @@ const Information: React.FC<InformationProps> = ({
           >
             <div className="my-4">
               <Link
-                to={`information${post.node.fields.slug}`}
+                to={`/information${post.node.fields.slug}`}
               >
                 <BottomBorderBox>
                   <p className="lg:text-lg xl:text-lg font-semibold mb-2">
