@@ -4,7 +4,7 @@ export const FETCH_POSTS = (): any => {
   const { allMarkdownRemark } = useStaticQuery(graphql`
     query FetchPosts {
       allMarkdownRemark(
-        sort: { order: DESC, fields: [frontmatter___date] }
+        sort: { frontmatter: { date: DESC } }
       ) {
         totalCount
         edges {

@@ -19,26 +19,22 @@ exports.createPages = async ({graphql, actions }) => {
 
   const postTemplate = path.resolve('./src/components/templates/PostTemplate.tsx')
   // TODO: queriesのものを使えるようにする
-  const result = await graphql(`
-    query FetchPosts {
-      allMarkdownRemark(
-        sort: { order: DESC, fields: [frontmatter___date] }
-      ) {
-        edges {
-          node {
-            excerpt(pruneLength: 40)
-            fields {
-              slug
-            }
-            frontmatter {
-              date(formatString: "YYYY/MM/DD")
-              title
-            }
-          }
+  const result = await graphql(`query FetchPosts {
+  allMarkdownRemark(sort: {frontmatter: {date: DESC}}) {
+    edges {
+      node {
+        excerpt(pruneLength: 40)
+        fields {
+          slug
+        }
+        frontmatter {
+          date(formatString: "YYYY/MM/DD")
+          title
         }
       }
     }
-  `)
+  }
+}`)
 
   if(result.errors) {
     throw result.errors
