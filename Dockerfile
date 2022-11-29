@@ -1,9 +1,11 @@
-FROM node:13.6-alpine
-WORKDIR /home/app
-EXPOSE 8000
+FROM node:18-alpine
 
-COPY package.json /home/app
+ENV TZ=Asia/Tokyo
+WORKDIR /app
+
+COPY package.json /app
+COPY yarn.lock /app
+
 RUN yarn install && yarn cache clean
-RUN rm -rf node_modules/sharp && yarn add sharp
 
-COPY . /home/app
+COPY . /app
