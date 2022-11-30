@@ -9,5 +9,4 @@ date: "2020-07-20"
 TwitterやPixiv等にて活動しておりますので、そちらにて応援してくださると幸いです。
 
 * Twitter: [@ayata\_taguchi\_](https://twitter.com/ayata_taguchi_)
-
 * Pixiv: [ayata\(多口綾汰\) \- pixiv](https://pixiv.net/member.php?id=2457129)
