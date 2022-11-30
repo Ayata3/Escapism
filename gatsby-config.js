@@ -14,10 +14,6 @@ module.exports = {
     'gatsby-plugin-typescript',
     'gatsby-plugin-postcss',
     {
-      resolve: 'gatsby-plugin-google-analytics',
-      options: { trackingId: 'UA-139333253-2' },
-    },
-    {
       resolve: 'gatsby-plugin-purgecss',
       options: {
         printRejected: true,
