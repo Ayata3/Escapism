@@ -1,16 +1,18 @@
-version: '3.7'
+version: '3'
 services:
-  server:
-    build: .
-    volumes:
-      - .:/home/app
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: "yarn run develop --host=0.0.0.0"
     ports:
-      - 127.0.0.1:8000:8000
-    entrypoint: "yarn run develop --host=0.0.0.0"
-  code:
-    image: codercom/code-server
-    ports:
-      - 127.0.0.1:8080:8080
+      - 8000:8000
     volumes:
-      - ./:/home/coder/app
-    entrypoint: "code-server --auth none /home/coder/app"
+      - node_modules:/app/node_modules
+    tty: true
+    stdin_open: true
+    environment:
+      - GATSBY_TELEMETRY_DISABLED=1
+      - CHOKIDAR_USEPOLLING=true
+volumes:
+  node_modules:

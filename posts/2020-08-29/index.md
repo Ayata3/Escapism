@@ -12,5 +12,4 @@ SSF03で頒布予定でした大崎甘奈がG.R.A.D.に挑む話を描き切っ�
 活動や進捗、サンプル等はTwitterやpixivにて随時情報発信していきますので、フォローしていただけると幸いです。
 
 * Twitter: [@ayata\_taguchi\_](https://twitter.com/ayata_taguchi_)
-
 * Pixiv: [ayata\(多口綾汰\) \- pixiv](https://pixiv.net/member.php?id=2457129)

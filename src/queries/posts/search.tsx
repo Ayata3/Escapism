@@ -4,13 +4,13 @@ export const FETCH_POSTS = (): any => {
   const { allMarkdownRemark } = useStaticQuery(graphql`
     query FetchPosts {
       allMarkdownRemark(
-        sort: { order: DESC, fields: [frontmatter___date] }
+        sort: { frontmatter: { date: DESC } }
       ) {
         totalCount
         edges {
           node {
             id
-            excerpt(pruneLength: 40)
+            excerpt(pruneLength: 40, truncate: true)
             fields {
               slug
             }

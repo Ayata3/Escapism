@@ -1,5 +1,5 @@
 import React from 'react'
-import Img from 'gatsby-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 import { FETCH_IMAGES } from '../../queries/images'
 
 interface ImageProps {
@@ -16,9 +16,11 @@ const Image: React.FC<ImageProps> = ({
     return image.node.relativePath.includes(filename)
   })
   return (
-    <Img
+    // TODO: altテキストを渡す
+    <GatsbyImage
+      image={image.node.childImageSharp.gatsbyImageData}
       className={addClassName}
-      fixed={image.node.childImageSharp.fixed}
+      alt={'alt text'}
     />
   )
 }

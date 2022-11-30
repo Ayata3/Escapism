@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/camelcase */
 module.exports = {
   siteMetadata: {
     title: '現実逃避跡地',
@@ -14,10 +13,6 @@ module.exports = {
   plugins: [
     'gatsby-plugin-typescript',
     'gatsby-plugin-postcss',
-    {
-      resolve: 'gatsby-plugin-google-analytics',
-      options: { trackingId: 'UA-139333253-2' },
-    },
     {
       resolve: 'gatsby-plugin-purgecss',
       options: {
@@ -60,8 +55,8 @@ module.exports = {
       },
     },
     'gatsby-plugin-sharp',
+    'gatsby-plugin-image',
     'gatsby-plugin-twitter',
-    'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
@@ -82,6 +77,15 @@ module.exports = {
         host: 'https://ayata3.github.io/Escapism',
         sitemap:
           'https://ayata3.github.io/Escapism/sitemap.xml',
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-google-gtag',
+      options: {
+        trackingIds: ['G-LD48SW7ZST'],
+        pluginConfig: {
+          head: true,
+        },
       },
     },
   ],
