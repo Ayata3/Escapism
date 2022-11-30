@@ -1,5 +1,4 @@
 import React from 'react'
-import { Helmet } from 'react-helmet'
 import { FETCH_SITE } from '../../queries/site'
 
 interface MetadataProps {
@@ -14,52 +13,47 @@ const Metadata: React.FC<MetadataProps> = ({
   const site = FETCH_SITE()
 
   return (
-    <Helmet
-      title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
-      meta={[
-        {
-          name: 'description',
-          content:
-            description || site.siteMetadata.description,
-        },
-        {
-          name: 'og:title',
-          content: title || site.siteMetadata.title,
-        },
-        {
-          name: 'og:description',
-          content:
-            description || site.siteMetadata.description,
-        },
-        {
-          name: 'og:type',
-          content: 'website',
-        },
-        {
-          name: 'twitter:card',
-          content: 'summary',
-        },
-        {
-          name: 'twitter:creator',
-          content: site.siteMetadata.social.twitter,
-        },
-        {
-          name: 'twitter:title',
-          content: title || site.siteMetadata.title,
-        },
-        {
-          name: 'twitter:description',
-          content:
-            description || site.siteMetadata.description,
-        },
-        {
-          name: 'google-site-verification',
-          content:
-            'Wj-rsWIHA_2EegrJ7sDJAdyhoD2mAR4wk68w1_NPwZA',
-        },
-      ]}
-    />
+    <>
+      <title>
+        {title + ' | ' + site.siteMetadata.title}
+      </title>
+      <meta
+        name="description"
+        content={
+          description || site.siteMetadata.description
+        }
+      />
+      <meta
+        name="og:title"
+        content={title || site.siteMetadata.title}
+      />
+      <meta
+        name="og:description"
+        content={
+          description || site.siteMetadata.description
+        }
+      />
+      <meta name="og:type" content="website" />
+      <meta name="twitter:card" content="summary" />
+      <meta
+        name="twitter:creator"
+        content={site.siteMetadata.social.twitter}
+      />
+      <meta
+        name="twitter:title"
+        content={title || site.siteMetadata.title}
+      />
+      <meta
+        name="twitter:description"
+        content={
+          description || site.siteMetadata.description
+        }
+      />
+      <meta
+        name="google-site-verification"
+        content="Wj-rsWIHA_2EegrJ7sDJAdyhoD2mAR4wk68w1_NPwZA"
+      />
+    </>
   )
 }
 

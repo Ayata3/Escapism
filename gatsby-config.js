@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/camelcase */
 module.exports = {
   siteMetadata: {
     title: '現実逃避跡地',
@@ -61,7 +60,6 @@ module.exports = {
     },
     'gatsby-plugin-sharp',
     'gatsby-plugin-twitter',
-    'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
