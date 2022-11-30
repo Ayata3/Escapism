@@ -59,6 +59,7 @@ module.exports = {
       },
     },
     'gatsby-plugin-sharp',
+    'gatsby-plugin-image',
     'gatsby-plugin-twitter',
     {
       resolve: 'gatsby-plugin-manifest',

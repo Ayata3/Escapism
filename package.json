@@ -25,8 +25,8 @@
   },
   "dependencies": {
     "gatsby": "^5.2.0",
-    "gatsby-image": "^3.11.0",
     "gatsby-plugin-google-analytics": "^5.2.0",
+    "gatsby-plugin-image": "^3.2.0",
     "gatsby-plugin-manifest": "^5.2.0",
     "gatsby-plugin-offline": "^6.2.0",
     "gatsby-plugin-postcss": "^6.2.0",
