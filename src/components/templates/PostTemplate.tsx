@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { graphql, HeadFC } from 'gatsby'
 
 import Header from '../atoms/Header'
 import Footer from '../atoms/Footer'
@@ -22,10 +22,6 @@ const PostTemplate: React.FC<PostTemplateProps> = ({
 
   return (
     <div className="flex flex-col min-h-screen bg-white">
-      <Metadata
-        title={post.frontmatter.title}
-        description={post.excerpt}
-      />
       <Header />
       <InformationHero />
       <Post post={post} />
@@ -36,6 +32,20 @@ const PostTemplate: React.FC<PostTemplateProps> = ({
 }
 
 export default PostTemplate
+
+export const Head: HeadFC<PostTemplateProps> = ({
+  data,
+  pageContext,
+}) => {
+  const post = data.markdownRemark
+
+  return (
+    <Metadata
+      title={post.frontmatter.title}
+      description={post.excerpt}
+    />
+  )
+}
 
 // TODO: queriesに移動できるようにする
 export const fetchPost = graphql`

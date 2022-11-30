@@ -6,7 +6,6 @@ import Footer from '../atoms/Footer'
 import TopHero from '../atoms/TopHero'
 import ProfileCard from '../organisms/ProfileCard'
 import Information from '../organisms/Infomation'
-import Metadata from '../atoms/Metadata'
 
 interface TopTemplateProps {
   posts: any
@@ -17,7 +16,6 @@ const TopTemplate: React.FC<TopTemplateProps> = ({
 }) => {
   return (
     <div className="flex flex-col min-h-screen bg-white">
-      <Metadata title={'Top'} description={undefined} />
       <Header />
       <TopHero />
       <ProfileCard>
