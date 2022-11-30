@@ -79,5 +79,14 @@ module.exports = {
           'https://ayata3.github.io/Escapism/sitemap.xml',
       },
     },
+    {
+      resolve: 'gatsby-plugin-google-gtag',
+      options: {
+        trackingIds: ['G-LD48SW7ZST'],
+        pluginConfig: {
+          head: true,
+        },
+      },
+    },
   ],
 }
