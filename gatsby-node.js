@@ -23,7 +23,7 @@ exports.createPages = async ({graphql, actions }) => {
   allMarkdownRemark(sort: {frontmatter: {date: DESC}}) {
     edges {
       node {
-        excerpt(pruneLength: 40)
+        excerpt(pruneLength: 40, truncate: true)
         fields {
           slug
         }

@@ -10,7 +10,7 @@ export const FETCH_POSTS = (): any => {
         edges {
           node {
             id
-            excerpt(pruneLength: 40)
+            excerpt(pruneLength: 40, truncate: true)
             fields {
               slug
             }
