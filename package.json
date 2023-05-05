@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "repository": "https://github.com/Ayata3/Escapism.git",
   "author": "Ayata3 <ayata.grobserver@gmail.com>",
+  "private": true,
   "scripts": {
     "start": "gatsby develop",
     "develop": "gatsby develop",
@@ -13,52 +14,49 @@
     "lint": "eslint . --ignore-path .gitignore --ext .ts,.tsx",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public -b gh-pages"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "lint-staged": {
     "*.{ts,tsx}": [
-      "eslint . --ignore-path .gitignore --ext .ts,.tsx"
+      "yarn run lint"
     ]
   },
   "dependencies": {
-    "gatsby": "^5.2.0",
-    "gatsby-plugin-google-gtag": "^5.2.0",
-    "gatsby-plugin-image": "^3.2.0",
-    "gatsby-plugin-manifest": "^5.2.0",
-    "gatsby-plugin-offline": "^6.2.0",
-    "gatsby-plugin-postcss": "^6.2.0",
-    "gatsby-plugin-purgecss": "^6.1.2",
-    "gatsby-plugin-robots-txt": "^1.8.0",
-    "gatsby-plugin-sharp": "^5.2.0",
-    "gatsby-plugin-sitemap": "^6.2.0",
-    "gatsby-plugin-twitter": "^5.2.0",
-    "gatsby-plugin-typescript": "^5.2.0",
-    "gatsby-remark-images": "^7.2.0",
-    "gatsby-source-filesystem": "^5.2.0",
-    "gatsby-transformer-remark": "^6.2.0",
-    "gatsby-transformer-sharp": "^5.2.0",
-    "gh-pages": "^3.1.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "tailwindcss": "^1.7.5"
+    "gatsby": "5.9.0",
+    "gatsby-plugin-google-gtag": "5.9.0",
+    "gatsby-plugin-image": "3.9.0",
+    "gatsby-plugin-manifest": "5.9.0",
+    "gatsby-plugin-offline": "6.9.0",
+    "gatsby-plugin-postcss": "6.9.0",
+    "gatsby-plugin-purgecss": "6.2.1",
+    "gatsby-plugin-robots-txt": "1.8.0",
+    "gatsby-plugin-sharp": "5.9.0",
+    "gatsby-plugin-sitemap": "6.9.0",
+    "gatsby-plugin-twitter": "5.9.0",
+    "gatsby-plugin-typescript": "5.9.0",
+    "gatsby-remark-images": "7.9.0",
+    "gatsby-source-filesystem": "5.9.0",
+    "gatsby-transformer-remark": "6.9.0",
+    "gatsby-transformer-sharp": "5.9.0",
+    "gh-pages": "5.0.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "tailwindcss": "3.3.2"
   },
   "devDependencies": {
-    "@types/node": "^18.11.9",
-    "@types/react": "^18.0.25",
-    "@types/react-dom": "^18.0.9",
-    "@types/react-helmet": "^6.1.6",
-    "@typescript-eslint/eslint-plugin": "^3.10.1",
-    "@typescript-eslint/parser": "^3.10.1",
-    "eslint": "^7.7.0",
-    "eslint-config-prettier": "^6.11.0",
-    "eslint-plugin-prettier": "^3.1.4",
-    "eslint-plugin-react": "^7.20.6",
-    "husky": "^4.2.5",
-    "lint-staged": "^10.2.13",
-    "prettier": "^2.1.1",
-    "typescript": "^4.9.3"
+    "@types/node": "20.0.0",
+    "@types/react": "18.2.5",
+    "@types/react-dom": "18.2.3",
+    "@types/react-helmet": "6.1.6",
+    "@typescript-eslint/eslint-plugin": "5.59.2",
+    "@typescript-eslint/parser": "5.59.2",
+    "autoprefixer": "10.4.14",
+    "eslint": "8.39.0",
+    "eslint-config-prettier": "8.8.0",
+    "eslint-plugin-prettier": "4.2.1",
+    "eslint-plugin-react": "7.32.2",
+    "husky": "8.0.3",
+    "lint-staged": "13.2.2",
+    "postcss": "8.4.23",
+    "prettier": "2.8.8",
+    "typescript": "5.0.4"
   }
 }
