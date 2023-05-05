@@ -9,9 +9,9 @@ interface InformationTemplateProps {
   posts: any
 }
 
-const InformationTemplate: React.FC<InformationTemplateProps> = ({
-  posts,
-}) => {
+const InformationTemplate: React.FC<
+  InformationTemplateProps
+> = ({ posts }) => {
   return (
     <div className="flex flex-col min-h-screen bg-white">
       <Header />
