@@ -4,13 +4,12 @@ import sitemap from '@astrojs/sitemap'
 
 // https://astro.build/config
 export default defineConfig({
-  // GitHub Pages のプロジェクトページとして配信するため、
-  // Gatsby の pathPrefix: '/Escapism' を site + base で再現する。
+  // 外部に貼られた既存リンクを壊さないため、公開URLは移行前後で
+  // 一致させる。Gatsby の pathPrefix: '/Escapism' を引き継ぐ。
   site: 'https://ayata3.github.io',
   base: '/Escapism',
 
-  // 既存URLは末尾スラッシュ付き（例: /Escapism/information/2017-08-18/）。
-  // 外部に貼られたリンクを壊さないよう、この形を維持する。
+  // Gatsby は末尾スラッシュ付きでURLを生成していた。
   trailingSlash: 'always',
   build: {
     format: 'directory',
