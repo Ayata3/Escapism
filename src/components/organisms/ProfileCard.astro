@@ -1,0 +1,56 @@
+---
+import Section from '../atoms/Section.astro'
+import BottomBorderBox from '../atoms/BottomBorderBox.astro'
+import ProfileIcon from '../atoms/ProfileIcon.astro'
+import Container from '../atoms/Container.astro'
+---
+<Container class="bg-orange-400">
+  <BottomBorderBox>
+    <Section
+      sectionName="Profile"
+      sectionSubName="プロフィール"
+      class="text-white"
+    />
+  </BottomBorderBox>
+  <div
+    class="grid grid-rows-4 grid-flow-col gap-0 mt-4 sm:w-auto md:w-auto"
+  >
+    <div class="row-span-4">
+      <ProfileIcon />
+    </div>
+    <h3
+      class="row-span-1 col-span-1 text-white font-medium text-xl lg:text-3xl xl:text-3xl -ml-6 md:ml-0 lg:ml-0 xl:ml-0"
+    >
+      多口綾汰
+    </h3>
+    <p
+      class="row-span-1 col-span-1 text-white text-xs lg:text-xl xl:text-xl -ml-6 md:ml-0 lg:ml-0 xl:ml-0"
+    >
+      Webエンジニア / イラストレーター
+    </p>
+    <ul
+      class="row-span-2 col-span-1 list-disc list-inside -mt-1 md:mt-0 lg:mt-0 xl:mt-0 -ml-6 md:ml-0 lg:ml-0 xl:ml-0"
+    >
+      <li class="text-white text-xs lg:text-lg xl:text-lg">
+        Twitter:{' '}
+        <a
+          href="https://twitter.com/ayata_taguchi_"
+          target="_blank"
+          rel="noopener noreferrer">@ayata_taguchi_</a
+        >
+      </li>
+      <li class="text-white text-xs lg:text-lg xl:text-lg">
+        Pixiv:{' '}
+        <a
+          href="https://www.pixiv.net/users/2457129"
+          target="_blank"
+          rel="noopener noreferrer">ayata3</a
+        >
+      </li>
+      <li class="text-white text-xs lg:text-lg xl:text-lg">
+        E-mail: ayata.grobserver[at]gmail.com
+      </li>
+    </ul>
+  </div>
+  <slot />
+</Container>

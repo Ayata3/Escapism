@@ -1,0 +1,18 @@
+---
+import BaseLayout from './BaseLayout.astro'
+import InformationHero from '../components/atoms/InformationHero.astro'
+import Information from '../components/organisms/Information.astro'
+import type { PostSummary } from '../lib/posts'
+
+interface Props {
+  posts: PostSummary[]
+  title?: string | undefined
+  description?: string | undefined
+}
+
+const { posts, title, description } = Astro.props
+---
+<BaseLayout title={title} description={description}>
+  <InformationHero />
+  <Information posts={posts} />
+</BaseLayout>

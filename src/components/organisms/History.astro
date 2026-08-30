@@ -1,0 +1,27 @@
+---
+import Section from '../atoms/Section.astro'
+import Container from '../atoms/Container.astro'
+import history from '../../data/history'
+---
+<Container class="bg-white">
+  <Section
+    sectionName="Background"
+    sectionSubName="バックグラウンド"
+    class="text-orange-400"
+  />
+  <ul class="mt-4 text-gray-900">
+    {
+      history.map((data) => (
+        <li
+          class="grid grid-flow-row grid-cols-2 gap-0 sm:w-auto md:w-auto mb-2 text-xs lg:text-lg xl:text-lg"
+        >
+          <span class="col-span-1 text-right mr-8">
+            {data.date}
+          </span>
+          <p class="col-span-1">{data.event}</p>
+        </li>
+      ))
+    }
+  </ul>
+  <slot />
+</Container>

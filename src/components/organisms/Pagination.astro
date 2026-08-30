@@ -1,0 +1,56 @@
+---
+import Container from '../atoms/Container.astro'
+import { withBase } from '../../lib/url'
+import type { PostSummary } from '../../lib/posts'
+
+interface Props {
+  previous: PostSummary | null
+  next: PostSummary | null
+}
+
+const { previous, next } = Astro.props
+---
+<Container class="bg-white">
+  <div class="grid grid-flow-row grid-cols-2 gap-0">
+    <div
+      class="col-span-1 border-t border-b border-r border-gray-900"
+    >
+      {
+        previous && (
+          <a href={withBase(previous.path)}>
+            <div class="text-gray-900 mx-8">
+              <div class="my-4">
+                <div class="lg:text-lg xl:text-lg font-semibold mb-2">
+                  {previous.title}
+                </div>
+                <p class="text-sm">{previous.excerpt}</p>
+                <p class="text-sm text-right my-1">
+                  {previous.date}
+                </p>
+              </div>
+            </div>
+          </a>
+        )
+      }
+    </div>
+    <div
+      class="col-span-1 border-t border-b border-l border-gray-900"
+    >
+      {
+        next && (
+          <a href={withBase(next.path)}>
+            <div class="text-gray-900 mx-8">
+              <div class="my-4">
+                <div class="lg:text-lg xl:text-lg font-semibold mb-2">
+                  {next.title}
+                </div>
+                <p class="text-sm">{next.excerpt}</p>
+                <p class="text-sm text-right my-1">{next.date}</p>
+              </div>
+            </div>
+          </a>
+        )
+      }
+    </div>
+  </div>
+</Container>

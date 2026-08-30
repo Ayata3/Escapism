@@ -1,0 +1,17 @@
+---
+import BaseLayout from './BaseLayout.astro'
+import ProfileCard from '../components/organisms/ProfileCard.astro'
+import History from '../components/organisms/History.astro'
+
+interface Props {
+  title?: string | undefined
+  description?: string | undefined
+}
+
+const { title, description } = Astro.props
+---
+<BaseLayout title={title} description={description}>
+  <ProfileCard />
+  <History />
+  <slot />
+</BaseLayout>
