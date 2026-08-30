@@ -154,7 +154,8 @@ dist/
 .astro/
 
 # Yarn
-# nodeLinker: node-modules のため node_modules は上のNode節で無視される。
-# .yarn 配下はキャッシュや状態ファイルのみで、追跡すべきものはない。
+# Yarn本体は .yarn/releases に同梱し、それ以外の .yarn 配下（キャッシュや
+# 状態ファイル）は追跡しない。
 .yarn/*
+!.yarn/releases
 .pnp.*

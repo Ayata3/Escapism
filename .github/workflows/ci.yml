@@ -15,10 +15,6 @@ jobs:
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
-      # setup-node が Yarn のバージョンを検出する前に Yarn 4 を用意する。
-      # 順序を逆にすると、ランナー既定の Yarn 1 で検出されて失敗する。
-      - run: corepack enable
-
       - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
           node-version-file: .node-version
