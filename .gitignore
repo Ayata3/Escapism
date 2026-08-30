@@ -152,3 +152,9 @@ temp/
 # Astro
 dist/
 .astro/
+
+# Yarn
+# nodeLinker: node-modules のため node_modules は上のNode節で無視される。
+# .yarn 配下はキャッシュや状態ファイルのみで、追跡すべきものはない。
+.yarn/*
+.pnp.*

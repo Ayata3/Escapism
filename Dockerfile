@@ -3,9 +3,11 @@ FROM node:22-alpine
 ENV TZ=Asia/Tokyo
 WORKDIR /app
 
-COPY package.json /app
-COPY yarn.lock /app
+# package.json の packageManager に従って Yarn 4 を用意する。
+RUN corepack enable
 
-RUN yarn install && yarn cache clean
+COPY package.json yarn.lock .yarnrc.yml /app/
+
+RUN yarn install --immutable && yarn cache clean
 
 COPY . /app

@@ -4,6 +4,7 @@
   "repository": "https://github.com/Ayata3/Escapism.git",
   "author": "Ayata3 <ayata.grobserver@gmail.com>",
   "private": true,
+  "packageManager": "yarn@4.18.0",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
