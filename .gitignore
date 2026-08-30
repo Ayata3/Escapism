@@ -151,3 +151,7 @@ temp/
 ### Gatsby ###
 public
 .cache
+
+# Astro
+dist/
+.astro/

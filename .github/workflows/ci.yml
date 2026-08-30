@@ -24,8 +24,10 @@ jobs:
 
       - run: yarn lint
 
-      # TODO: `yarn type-check` は master 時点で 17 件のエラーが出るため未追加。
-      # React 18 で `React.FC` が children を暗黙に含まなくなった影響で、
-      # 対象ファイルはいずれも Astro 移行で削除されるため、
-      # 移行完了時に `astro check` として復活させる。
+      # Gatsby と併存している間は yarn の hoisting により cookie の解決が
+      # 衝突し `astro build` が通らない。ビルドの検証はカットオーバーまで
+      # 持ち越す。
+      # TODO: Gatsby撤去のPRで `astro build` を追加する
+      - run: yarn astro:sync
+
       - run: yarn build

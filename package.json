@@ -12,7 +12,9 @@
     "serve": "gatsby serve --prefix-paths",
     "type-check": "tsc --noEmit",
     "lint": "eslint . --ignore-path .gitignore --ext .ts,.tsx",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public -b gh-pages"
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public -b gh-pages",
+    "astro": "astro",
+    "astro:sync": "astro sync"
   },
   "lint-staged": {
     "*.{ts,tsx}": [
@@ -20,6 +22,8 @@
     ]
   },
   "dependencies": {
+    "@astrojs/sitemap": "3.7.3",
+    "astro": "7.2.8",
     "gatsby": "5.9.0",
     "gatsby-plugin-google-gtag": "5.9.0",
     "gatsby-plugin-image": "3.9.0",
