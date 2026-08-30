@@ -152,3 +152,10 @@ temp/
 # Astro
 dist/
 .astro/
+
+# Yarn
+# Yarn本体は .yarn/releases に同梱し、それ以外の .yarn 配下（キャッシュや
+# 状態ファイル）は追跡しない。
+.yarn/*
+!.yarn/releases
+.pnp.*
