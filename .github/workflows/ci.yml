@@ -13,25 +13,16 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5.1.0
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
-      - uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5.0.0
-        with:
-          node-version-file: .node-version
-          # 既定では package.json の packageManager を見て `yarn cache dir` を
-          # 実行するが、この時点では corepack 未有効で Yarn 1 が動くため失敗する。
-          package-manager-cache: false
-
-      # package.json の packageManager に従って Yarn 4 を用意する。
+      # setup-node が Yarn のバージョンを検出する前に Yarn 4 を用意する。
+      # 順序を逆にすると、ランナー既定の Yarn 1 で検出されて失敗する。
       - run: corepack enable
 
-      # setup-node の cache は Yarn のバージョン検出を corepack 有効化より先に
-      # 行うため噛み合わない。Yarn 4 のグローバルキャッシュを直接扱う。
-      - uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
-          path: ~/.yarn/berry/cache
-          key: yarn-${{ runner.os }}-${{ hashFiles('yarn.lock') }}
-          restore-keys: yarn-${{ runner.os }}-
+          node-version-file: .node-version
+          cache: yarn
 
       - run: yarn install --immutable
 
