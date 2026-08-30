@@ -25,6 +25,8 @@ export const formatDate = (date: Date): string => {
 /**
  * Gatsby の excerpt(pruneLength: 40, truncate: true) に相当する。
  * Markdown記法と生HTMLを落としたうえで、単語境界を考慮せず切り詰める。
+ * Gatsby は lodash の truncate を使っており、pruneLength に省略記号を
+ * 含めるため、本文は pruneLength - 1 文字までとする。
  */
 export const excerpt = (
   body: string,
@@ -41,7 +43,7 @@ export const excerpt = (
     .trim()
 
   return text.length > pruneLength
-    ? `${text.slice(0, pruneLength)}…`
+    ? `${text.slice(0, pruneLength - 1)}…`
     : text
 }
 
