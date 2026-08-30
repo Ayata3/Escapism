@@ -1,0 +1,31 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [master]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5.1.0
+
+      - uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5.0.0
+        with:
+          node-version-file: .node-version
+          cache: yarn
+
+      - run: yarn install --frozen-lockfile
+
+      - run: yarn lint
+
+      # TODO: `yarn type-check` は master 時点で 17 件のエラーが出るため未追加。
+      # React 18 で `React.FC` が children を暗黙に含まなくなった影響で、
+      # 対象ファイルはいずれも Astro 移行で削除されるため、
+      # 移行完了時に `astro check` として復活させる。
+      - run: yarn build
