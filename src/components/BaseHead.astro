@@ -1,5 +1,6 @@
 ---
 import { SITE } from '../consts'
+import { withBase } from '../lib/url'
 
 interface Props {
   title?: string | undefined
@@ -32,6 +33,14 @@ const pageDescription = description ?? SITE.description
   name="google-site-verification"
   content={SITE.googleSiteVerification}
 />
+
+<link rel="icon" href={withBase('/favicon-32x32.png')} />
+<link
+  rel="apple-touch-icon"
+  href={withBase('/apple-touch-icon.png')}
+/>
+<link rel="manifest" href={withBase('/manifest.webmanifest')} />
+<meta name="theme-color" content="#f6ad55" />
 
 <script
   is:inline
