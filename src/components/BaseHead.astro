@@ -9,25 +9,47 @@ interface Props {
 
 const { title, description } = Astro.props
 
-const pageTitle = title ? `${title} | ${SITE.title}` : SITE.title
+const pageTitle = title
+  ? `${title} | ${SITE.title}`
+  : SITE.title
 const pageDescription = description ?? SITE.description
+
+// テンプレート内に直接書くと整形器がJSを壊すため、文字列として組み立てる。
+const gtagBootstrap = `
+window.dataLayer = window.dataLayer || [];
+function gtag() { window.dataLayer.push(arguments); }
+gtag('js', new Date());
+gtag('config', '${SITE.gaTrackingId}');
+`
 ---
+
 <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1"
+/>
 
 <title>{pageTitle}</title>
 <meta name="description" content={pageDescription} />
 
-{/* og:* は property 属性であるべきだが、移行では挙動を保つことを
-    優先し Gatsby 版のまま name 属性で出している。 */}
+{
+  /* og:* は property 属性であるべきだが、移行では挙動を保つことを
+    優先し Gatsby 版のまま name 属性で出している。 */
+}
 <meta name="og:title" content={title ?? SITE.title} />
 <meta name="og:description" content={pageDescription} />
 <meta name="og:type" content="website" />
 
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:creator" content={SITE.social.twitter} />
+<meta
+  name="twitter:creator"
+  content={SITE.social.twitter}
+/>
 <meta name="twitter:title" content={title ?? SITE.title} />
-<meta name="twitter:description" content={pageDescription} />
+<meta
+  name="twitter:description"
+  content={pageDescription}
+/>
 
 <meta
   name="google-site-verification"
@@ -39,18 +61,15 @@ const pageDescription = description ?? SITE.description
   rel="apple-touch-icon"
   href={withBase('/apple-touch-icon.png')}
 />
-<link rel="manifest" href={withBase('/manifest.webmanifest')} />
+<link
+  rel="manifest"
+  href={withBase('/manifest.webmanifest')}
+/>
 <meta name="theme-color" content="#f6ad55" />
 
 <script
   is:inline
   async
-  src={`https://www.googletagmanager.com/gtag/js?id=${SITE.gaTrackingId}`}></script>
-<script is:inline define:vars={{ trackingId: SITE.gaTrackingId }}>
-  window.dataLayer = window.dataLayer || []
-  function gtag() {
-    window.dataLayer.push(arguments)
-  }
-  gtag('js', new Date())
-  gtag('config', trackingId)
-</script>
+  src={`https://www.googletagmanager.com/gtag/js?id=${SITE.gaTrackingId}`}
+></script>
+<script is:inline set:html={gtagBootstrap} />

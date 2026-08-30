@@ -4,6 +4,7 @@ import { getSortedPosts, toSummary } from '../../lib/posts'
 
 const posts = (await getSortedPosts()).map(toSummary)
 ---
+
 <InformationLayout
   posts={posts}
   title="Information"

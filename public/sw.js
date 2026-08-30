@@ -17,10 +17,14 @@ self.addEventListener('activate', (event) => {
       await self.registration.unregister()
 
       const keys = await caches.keys()
-      await Promise.all(keys.map((key) => caches.delete(key)))
+      await Promise.all(
+        keys.map((key) => caches.delete(key))
+      )
 
       // 解除しただけでは、開いているタブは古いキャッシュを掴んだまま。
-      const clients = await self.clients.matchAll({ type: 'window' })
+      const clients = await self.clients.matchAll({
+        type: 'window',
+      })
       for (const client of clients) {
         client.navigate(client.url)
       }

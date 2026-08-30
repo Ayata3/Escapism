@@ -13,8 +13,10 @@ interface Props {
   next: PostSummary | null
 }
 
-const { title, date, description, previous, next } = Astro.props
+const { title, date, description, previous, next } =
+  Astro.props
 ---
+
 <BaseLayout title={title} description={description}>
   <InformationHero />
   <Post title={title} date={date}>

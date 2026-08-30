@@ -11,11 +11,15 @@
     "preview": "astro preview",
     "type-check": "astro check",
     "astro": "astro",
-    "lint": "eslint . --ignore-path .gitignore --ext .ts"
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
   "lint-staged": {
-    "*.ts": [
-      "yarn run lint"
+    "*.{ts,astro,js,mjs}": [
+      "eslint --fix",
+      "prettier --write"
     ]
   },
   "dependencies": {
@@ -25,17 +29,20 @@
   },
   "devDependencies": {
     "@astrojs/check": "0.9.10",
+    "@eslint/js": "10.0.1",
     "@types/node": "20.0.0",
-    "@typescript-eslint/eslint-plugin": "5.59.2",
-    "@typescript-eslint/parser": "5.59.2",
     "autoprefixer": "10.4.14",
-    "eslint": "8.39.0",
-    "eslint-config-prettier": "8.8.0",
-    "eslint-plugin-prettier": "4.2.1",
+    "eslint": "10.9.1",
+    "eslint-config-prettier": "10.1.8",
+    "eslint-plugin-astro": "3.1.0",
+    "eslint-plugin-jsx-a11y": "6.10.2",
+    "eslint-plugin-prettier": "5.5.6",
     "husky": "8.0.3",
     "lint-staged": "13.2.2",
     "postcss": "8.4.23",
-    "prettier": "2.8.8",
-    "typescript": "5.0.4"
+    "prettier": "3.9.6",
+    "prettier-plugin-astro": "0.14.1",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.68.0"
   }
 }
