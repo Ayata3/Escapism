@@ -27,6 +27,9 @@ jobs:
       - uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5.0.0
         with:
           node-version-file: .node-version
+          # 既定では package.json の packageManager を見て `yarn cache dir` を
+          # 実行するが、この時点では corepack 未有効で Yarn 1 が動くため失敗する。
+          package-manager-cache: false
 
       # package.json の packageManager に従って Yarn 4 を用意する。
       - run: corepack enable
