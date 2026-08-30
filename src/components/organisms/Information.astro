@@ -11,6 +11,7 @@ interface Props {
 
 const { posts } = Astro.props
 ---
+
 <Container class="bg-white">
   <Section
     sectionName="Information"
@@ -27,7 +28,9 @@ const { posts } = Astro.props
                 {post.title}
               </p>
               <p class="text-sm">{post.excerpt}</p>
-              <p class="text-sm text-right my-1">{post.date}</p>
+              <p class="text-sm text-right my-1">
+                {post.date}
+              </p>
             </BottomBorderBox>
           </a>
         </div>

@@ -12,6 +12,7 @@ interface Props {
 
 const { posts, title, description } = Astro.props
 ---
+
 <BaseLayout title={title} description={description}>
   <InformationHero />
   <Information posts={posts} />

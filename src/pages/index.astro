@@ -2,6 +2,9 @@
 import TopLayout from '../layouts/TopLayout.astro'
 import { getSortedPosts, toSummary } from '../lib/posts'
 
-const posts = (await getSortedPosts()).slice(0, 3).map(toSummary)
+const posts = (await getSortedPosts())
+  .slice(0, 3)
+  .map(toSummary)
 ---
+
 <TopLayout posts={posts} title="Top" />

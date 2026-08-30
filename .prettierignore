@@ -1,0 +1,8 @@
+dist/
+.astro/
+node_modules/
+yarn.lock
+
+# 公開済みの記事本文。整形器が触ると frontmatter の引用符や
+# 空行の扱いが変わり、意図しない差分を生む。
+src/content/posts/

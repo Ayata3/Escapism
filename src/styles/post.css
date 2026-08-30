@@ -1,4 +1,6 @@
-.post p, .post blockquote, .post script {
+.post p,
+.post blockquote,
+.post script {
   margin-bottom: 16px;
 }
 
@@ -19,7 +21,8 @@
   border-width: 1px;
 }
 
-.post ul, .post ol {
+.post ul,
+.post ol {
   margin-bottom: 16px;
   list-style-type: disc;
   list-style-position: inside;
