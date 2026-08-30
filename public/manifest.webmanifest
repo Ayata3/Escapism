@@ -1,0 +1,21 @@
+{
+  "name": "現実逃避跡地",
+  "short_name": "Escapism",
+  "start_url": "/Escapism/",
+  "scope": "/Escapism/",
+  "display": "minimal-ui",
+  "background_color": "#000",
+  "theme_color": "#f6ad55",
+  "icons": [
+    {
+      "src": "/Escapism/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/Escapism/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

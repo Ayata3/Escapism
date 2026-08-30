@@ -1,2 +1,3 @@
-postcss.config.js
-gatsby-node.js
+node_modules/
+dist/
+.astro/

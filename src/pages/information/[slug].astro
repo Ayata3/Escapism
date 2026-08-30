@@ -1,0 +1,36 @@
+---
+import { render } from 'astro:content'
+import PostLayout from '../../layouts/PostLayout.astro'
+import { getSortedPosts, toSummary } from '../../lib/posts'
+
+export async function getStaticPaths() {
+  const posts = await getSortedPosts()
+
+  return posts.map((post, index) => ({
+    params: { slug: post.id },
+    props: {
+      post,
+      // 日付降順の並びに対して、1つ後が previous、1つ前が next。
+      // gatsby-node.js の createPages と同じ対応関係にしている。
+      previous:
+        index === posts.length - 1
+          ? null
+          : toSummary(posts[index + 1]),
+      next: index === 0 ? null : toSummary(posts[index - 1]),
+    },
+  }))
+}
+
+const { post, previous, next } = Astro.props
+const { Content } = await render(post)
+const { title, date, excerpt } = toSummary(post)
+---
+<PostLayout
+  title={title}
+  date={date}
+  description={excerpt}
+  previous={previous}
+  next={next}
+>
+  <Content />
+</PostLayout>

@@ -1,0 +1,11 @@
+---
+import InformationLayout from '../../layouts/InformationLayout.astro'
+import { getSortedPosts, toSummary } from '../../lib/posts'
+
+const posts = (await getSortedPosts()).map(toSummary)
+---
+<InformationLayout
+  posts={posts}
+  title="Information"
+  description="サークル「現実逃避跡地」のインフォメーションです。"
+/>
