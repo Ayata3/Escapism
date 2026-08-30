@@ -1,0 +1,47 @@
+---
+import { SITE } from '../consts'
+
+interface Props {
+  title?: string | undefined
+  description?: string | undefined
+}
+
+const { title, description } = Astro.props
+
+const pageTitle = title ? `${title} | ${SITE.title}` : SITE.title
+const pageDescription = description ?? SITE.description
+---
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>{pageTitle}</title>
+<meta name="description" content={pageDescription} />
+
+{/* og:* は property 属性であるべきだが、移行では挙動を保つことを
+    優先し Gatsby 版のまま name 属性で出している。 */}
+<meta name="og:title" content={title ?? SITE.title} />
+<meta name="og:description" content={pageDescription} />
+<meta name="og:type" content="website" />
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:creator" content={SITE.social.twitter} />
+<meta name="twitter:title" content={title ?? SITE.title} />
+<meta name="twitter:description" content={pageDescription} />
+
+<meta
+  name="google-site-verification"
+  content={SITE.googleSiteVerification}
+/>
+
+<script
+  is:inline
+  async
+  src={`https://www.googletagmanager.com/gtag/js?id=${SITE.gaTrackingId}`}></script>
+<script is:inline define:vars={{ trackingId: SITE.gaTrackingId }}>
+  window.dataLayer = window.dataLayer || []
+  function gtag() {
+    window.dataLayer.push(arguments)
+  }
+  gtag('js', new Date())
+  gtag('config', trackingId)
+</script>

@@ -28,6 +28,6 @@ jobs:
       # 衝突し `astro build` が通らない。ビルドの検証はカットオーバーまで
       # 持ち越す。
       # TODO: Gatsby撤去のPRで `astro build` を追加する
-      - run: yarn astro:sync
+      - run: yarn astro:check
 
       - run: yarn build

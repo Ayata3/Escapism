@@ -1,0 +1,21 @@
+---
+import Container from '../atoms/Container.astro'
+
+interface Props {
+  title: string
+  date: string
+}
+
+const { title, date } = Astro.props
+---
+<Container class="bg-white">
+  <div>
+    <time datetime={date}>{date}</time>
+  </div>
+  <div class="mb-4">
+    <h1 class="text-3xl text-orange-400">{title}</h1>
+  </div>
+  <section class="post">
+    <slot />
+  </section>
+</Container>

@@ -1,0 +1,38 @@
+---
+import Section from '../atoms/Section.astro'
+import Container from '../atoms/Container.astro'
+import BottomBorderBox from '../atoms/BottomBorderBox.astro'
+import { withBase } from '../../lib/url'
+import type { PostSummary } from '../../lib/posts'
+
+interface Props {
+  posts: PostSummary[]
+}
+
+const { posts } = Astro.props
+---
+<Container class="bg-white">
+  <Section
+    sectionName="Information"
+    sectionSubName="インフォメーション"
+    class="text-orange-400"
+  />
+  {
+    posts.map((post) => (
+      <div class="text-gray-900 mx-8">
+        <div class="my-4">
+          <a href={withBase(post.path)}>
+            <BottomBorderBox>
+              <p class="lg:text-lg xl:text-lg font-semibold mb-2">
+                {post.title}
+              </p>
+              <p class="text-sm">{post.excerpt}</p>
+              <p class="text-sm text-right my-1">{post.date}</p>
+            </BottomBorderBox>
+          </a>
+        </div>
+      </div>
+    ))
+  }
+  <slot />
+</Container>

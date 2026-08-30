@@ -1,0 +1,41 @@
+---
+import BaseLayout from './BaseLayout.astro'
+import TopHero from '../components/atoms/TopHero.astro'
+import ProfileCard from '../components/organisms/ProfileCard.astro'
+import Information from '../components/organisms/Information.astro'
+import { withBase } from '../lib/url'
+import type { PostSummary } from '../lib/posts'
+
+interface Props {
+  posts: PostSummary[]
+  title?: string | undefined
+  description?: string | undefined
+}
+
+const { posts, title, description } = Astro.props
+---
+<BaseLayout title={title} description={description}>
+  <TopHero />
+  <ProfileCard>
+    <div class="flex justify-center mt-4">
+      <a href={withBase('/profile/')}>
+        <button
+          class="border border-white text-white py-2 px-10"
+        >
+          Show More
+        </button>
+      </a>
+    </div>
+  </ProfileCard>
+  <Information posts={posts}>
+    <div class="flex justify-center mt-4">
+      <a href={withBase('/information/')}>
+        <button
+          class="border border-gray-900 text-gray-900 py-2 px-10"
+        >
+          Show More
+        </button>
+      </a>
+    </div>
+  </Information>
+</BaseLayout>

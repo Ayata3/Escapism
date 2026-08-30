@@ -1,0 +1,19 @@
+---
+interface Props {
+  sectionName: string
+  sectionSubName: string
+  class?: string
+}
+
+const {
+  sectionName,
+  sectionSubName,
+  class: className = '',
+} = Astro.props
+---
+<div class="flex">
+  <h2 class={`text-3xl ${className}`}>{sectionName}</h2>
+  <p class={`text-xs ml-2 pt-5 ${className}`}>
+    / {sectionSubName}
+  </p>
+</div>
