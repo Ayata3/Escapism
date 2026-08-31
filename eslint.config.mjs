@@ -20,18 +20,4 @@ export default [
       },
     },
   },
-  {
-    // Tailwind と PostCSS の設定は CommonJS のまま。
-    files: ['tailwind.config.js', 'postcss.config.js'],
-    languageOptions: {
-      sourceType: 'commonjs',
-      globals: {
-        module: 'readonly',
-        require: 'readonly',
-      },
-    },
-    rules: {
-      '@typescript-eslint/no-require-imports': 'off',
-    },
-  },
 ]
