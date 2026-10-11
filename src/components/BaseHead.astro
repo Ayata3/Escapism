@@ -16,7 +16,10 @@ const pageDescription = description ?? SITE.description
 
 // OGP の url / image は絶対URLでなければクローラに解決されない。
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site)
-const ogImage = new URL(withBase('/icon-512.png'), Astro.site)
+const ogImage = new URL(
+  withBase('/icon-512.png'),
+  Astro.site
+)
 
 // テンプレート内に直接書くと整形器がJSを壊すため、文字列として組み立てる。
 const gtagBootstrap = `
