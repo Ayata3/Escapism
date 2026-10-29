@@ -1556,19 +1556,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:20.0.0":
-  version: 20.0.0
-  resolution: "@types/node@npm:20.0.0"
-  checksum: 10c0/34d67327d4145b406c0eff4f4b76a1d38a5ace393918381db0991e24ed0cc084450eb3341a80fca074e3eed1c4ae445e92749fd475026a16f14d2305871c280d
-  languageName: node
-  linkType: hard
-
-"@types/node@npm:^24.9.2":
+"@types/node@npm:*, @types/node@npm:^24.9.2":
   version: 24.13.3
   resolution: "@types/node@npm:24.13.3"
   dependencies:
     undici-types: "npm:~7.18.0"
   checksum: 10c0/a5bc08f49b9581dcdca90e02cd77197a3c799840807664942e5cd5161a553d4d2ae8064f7e3294410d748d7d098b5c1848be7fa50c06f29c4193ab16be4e59eb
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:22.20.5":
+  version: 22.20.5
+  resolution: "@types/node@npm:22.20.5"
+  dependencies:
+    undici-types: "npm:~6.21.0"
+  checksum: 10c0/0cf61a89c6a69917ab49f976a6bb11a29e3b348a6ae19f5827ceb91d3ade781faab58dcf3b8fa625f975f5d7536b9166ff94e8250c29272c667164f77c28fa88
   languageName: node
   linkType: hard
 
@@ -3076,7 +3078,7 @@ __metadata:
     "@astrojs/sitemap": "npm:3.7.3"
     "@eslint/js": "npm:10.0.1"
     "@tailwindcss/vite": "npm:4.3.3"
-    "@types/node": "npm:20.0.0"
+    "@types/node": "npm:22.20.5"
     astro: "npm:7.3.3"
     eslint: "npm:10.9.1"
     eslint-config-prettier: "npm:10.1.8"
@@ -6328,6 +6330,13 @@ __metadata:
   version: 0.1.3
   resolution: "uncrypto@npm:0.1.3"
   checksum: 10c0/74a29afefd76d5b77bedc983559ceb33f5bbc8dada84ff33755d1e3355da55a4e03a10e7ce717918c436b4dfafde1782e799ebaf2aadd775612b49f7b5b2998e
+  languageName: node
+  linkType: hard
+
+"undici-types@npm:~6.21.0":
+  version: 6.21.0
+  resolution: "undici-types@npm:6.21.0"
+  checksum: 10c0/c01ed51829b10aa72fc3ce64b747f8e74ae9b60eafa19a7b46ef624403508a54c526ffab06a14a26b3120d055e1104d7abe7c9017e83ced038ea5cf52f8d5e04
   languageName: node
   linkType: hard
 
